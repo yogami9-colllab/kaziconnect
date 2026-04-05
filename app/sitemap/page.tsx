@@ -10,6 +10,23 @@ export const metadata: Metadata = {
   description: 'A full overview of all pages available on the KaziConnect website.',
 }
 
+// ── Add this type ──
+type PageItem = {
+  title: string
+  href: string
+  description: string
+  icon: React.ReactElement
+  external?: boolean
+}
+
+type SitemapGroup = {
+  label: string
+  color: string
+  bg: string
+  icon: React.ReactElement
+  pages: PageItem[]
+}
+
 const sitemapGroups = [
   {
     label: 'Main Pages',
