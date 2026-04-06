@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,8 +11,7 @@ export const metadata: Metadata = {
   description: 'A full overview of all pages available on the KaziConnect website.',
 }
 
-// ── Add this type ──
-type PageItem = {
+type SitemapPage = {
   title: string
   href: string
   description: string
@@ -24,10 +24,10 @@ type SitemapGroup = {
   color: string
   bg: string
   icon: React.ReactElement
-  pages: PageItem[]
+  pages: SitemapPage[]
 }
 
-const sitemapGroups = [
+const sitemapGroups: SitemapGroup[] = [
   {
     label: 'Main Pages',
     color: '#006B3C',
